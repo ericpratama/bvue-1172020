@@ -1,5 +1,5 @@
 # bvue-demo
-
+file view nya : D2.vue D4.vue Details.vue Desktop9.vue
 ## Project setup
 ```
 npm install
