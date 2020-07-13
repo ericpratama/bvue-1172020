@@ -254,7 +254,7 @@
                 </b-container>
                 </div>
                 
-                            <!-- Main Content Start-->
+                            <!-- Main mau push ee Start-->
             </div>
                             <!-- Main Content End-->
 
@@ -326,7 +326,7 @@ hr{
     width: 98%;
     height: 1px;
 }
-/* bagian text dan header dalam konten */
+/* bagian text dan header dalam konten cek push git hub */
 .d4_header{
     font-family: Roboto;
     font-style: normal;
