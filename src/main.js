@@ -1,7 +1,7 @@
 import Vue from 'vue'
 // import Sidebar from './Sidebar.vue'
 //import D2 from './Coba.vue'
-import Coba from './D4.vue'
+import Coba from './Tbar6.vue'
 
 //import App from './App.vue'
 
@@ -17,4 +17,5 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(Coba),
+  
 }).$mount('#app')

@@ -117,6 +117,9 @@
                     <div class="konten">
                         <b-tabs class="tabs1" >
                             <b-tab  class="tabs2" title="ACCOUNT" active>
+                              <template v-slot:title>
+                                <img class="sidebar_icon" src="./assets/d4textaccount.svg" style="">
+                              </template>
                                 <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
                                     <p class="d4_header">Change Password</p>
                                     <b-row>
@@ -211,6 +214,9 @@
                                 </b-form>
                             </b-tab>
                               <b-tab title="SCHEDULE"><p>I'm the second tab</p>
+                                <template v-slot:title>
+                                  <img class="sidebar_icon" src="./assets/d4textschedule.svg" style="">
+                                </template>
                               </b-tab>
                         </b-tabs>
                     </div>
@@ -332,8 +338,11 @@ hr{
 }
 .nav-tabs .nav-link{
   border: 0px solid transparent !important;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 1px !important;
+  border-top-right-radius: 1px !important;
+  text-align: center;
+  width: 208px;
+  height: 90px;
 }
 a {
   color: #555555 !important;
