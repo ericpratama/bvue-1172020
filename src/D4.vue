@@ -211,6 +211,22 @@
                                         <!-- Main Content Start-->
                                         
                                     </b-row>
+                                    <b-row>
+                                      <b-col lg="9">
+                                      </b-col>
+                                      <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button style="color:#114483; background-color:white; border-color:#114483;">Cancel</b-button>
+                                        </div>
+                                      </b-col>
+                                      <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
+                                        </div>
+                                      </b-col>
+                                      <b-col lg="1">
+                                      </b-col>
+                                    </b-row>
                                 </b-form>
                             </b-tab>
                               <b-tab title="SCHEDULE"><p>I'm the second tab</p>
@@ -220,6 +236,7 @@
                               </b-tab>
                         </b-tabs>
                     </div>
+                    
                 </b-container>
                             <!-- Main Content Start-->
             </div>
@@ -286,7 +303,8 @@ body{
 .tab-content{
     background-color: white;
     margin-left: 10px;
-    padding-top:10px;   
+    padding-top:10px;
+    text-align: left;
 }
 .tabs2{
   padding-left:5%;

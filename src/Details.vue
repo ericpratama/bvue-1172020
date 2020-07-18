@@ -3,47 +3,64 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
+          <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
             <div>
               <ul class="nav flex-column">
                 <li class="nav-item navitem mx-auto">
-                  <b-button v-b-toggle.sidebar-1 class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg" style="margin-right:5px"></b-button>
-                  <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-                    <div class="px-3 py-2">
-                      <p>
-                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                      </p>
-                      <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-                    </div>
-                  </b-sidebar>
+                  <b-button v-on:click="greet" class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg"></b-button>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_1.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon1.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_1.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_2.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon2.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_2.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_3.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon3.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_3.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_4.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon4.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_4.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_5.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon5.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_5.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_6.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon6.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_6.svg" >
+                  </a>
+                <li class="nav-item navitem mx-auto">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon7.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_7.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_7.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon8.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_8.svg" >
+                  </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_8.svg" style="margin-right:5px"></a>
-                </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_9.svg" style="margin-right:5px"></a>
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon9.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_9.svg" >
+                  </a>
                 </li>
               </ul>           
             </div>
@@ -121,7 +138,7 @@
                         <b-tabs class="tabs1" >
                             <b-tab  class="tabs2" title="ACCOUNT" active  style="backrground-color:red;">
                                 <b-row>
-                                    <b-col lg="11"></b-col>
+                                    <b-col lg="11"><p>ss</p></b-col>
                                     <b-col lg="1"></b-col>
                                 </b-row>
                                 <template v-slot:title>
@@ -237,10 +254,55 @@
                                 </b-form>
                             </b-tab>
                             <b-tab title="CHANGE PASSWORD">
-                                <p>I'm the second tab</p>
                                 <template v-slot:title>
                                     <img class="sidebar_icon" src="./assets/changepassword.svg" style="margin-right:5px"> Change Password
                                 </template>
+                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
+                                  <p class="d4_header">Change Password</p>
+                                  <b-row>
+                                    <b-col lg="5">
+                                      <b-form-group id="input-group-7" label="Create Password" label-for="input-7" description="At least 5 character long">
+                                        <b-form-input
+                                            id="input-7"
+                                            v-model="form2.password2"
+                                            type="password"
+                                            required
+                                        >
+                                        </b-form-input>
+                                      </b-form-group>
+                                      </b-col>
+                                      <b-col lg="1">
+                                      </b-col>
+                                      <b-col lg="5">
+                                        <b-form-group id="input-group-8" label="Confirm Password" label-for="input-8" description="Re-type your new password">
+                                          <b-form-input
+                                              id="input-8"
+                                              v-model="form2.cpassword2"
+                                              type="password"
+                                              required
+                                          >
+                                          </b-form-input>
+                                        </b-form-group>
+                                    </b-col>
+                                  </b-row>
+                                  <b-row>
+                                    <b-col lg="9"> 
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button style="color:#114483; background-color:white; border-color:#114483; ">Cancel</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+
+                                    </b-col>
+                                    </b-row>
+                                </b-form>
                             </b-tab>
                             <b-tab title="SCHEDULE">
                                 <p>I'm the third tab</p>
@@ -267,29 +329,63 @@
 
 <script>
 export default {
-  name: 'app',
+name: 'app',
     data() {
-      return {
-        items: [
-        {
-          text: 'My Team',
-          href: '#'
-        },
-        {
-          text: 'Member Detail',
-          href: '#'
+        return {
+            form: {
+                id: '',
+                name: '',
+                username: '',
+                attribute1: '',
+                attribute2: '',
+                attribute3: '',
+                
+                show: true,   
+            },
+            form2:{
+              password2: '',
+              cpassword2: '',
+            },
+            counter:'close',
         }
-        ],
-      form: {
-        id: '',
-        password: '',
-        name: '',
-        cpassword: '',
-        username: '',
-        show: true,   
+    },
+    methods: {
+        greet: function () {
+            // `this` inside methods points to the Vue instance
+            // `event` is the native DOM event
+            if (this.counter == 'close') {
+                this.counter = 'open'
+                
+                document.getElementById("sidecol").style.width = "219px";
+                document.getElementById("sidecol").style.textAlign = 'left';
+            }
+            else if (this.counter == 'open'){
+                this.counter = 'close'
+                document.getElementById("sidecol").style.width = "5%";
+                
+            }
+        },
+        onSubmit(evt) {
+          evt.preventDefault()
+          alert(JSON.stringify(this.form))
+        },
+        onReset(evt) {
+          evt.preventDefault()
+          // Reset our form values
+          this.form.email = ''
+          this.form.name = ''
+          this.form.food = null
+          this.form.checked = []
+          // Trick to reset/clear native browser form validation state
+          this.show = false
+          this.$nextTick(() => {
+            this.show = true
+          })
+        }
+        
+        
       }
-    }
-  }
+    
 }
 </script>
 <style>
@@ -374,7 +470,7 @@ hr{
     border-bottom: 5px solid #114483 !important;
 }
 .nav-link{
-    margin-right: 66px;
+    
     border: 0px solid transparent !important;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
@@ -385,7 +481,19 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
-
+.ujung{
+  background-color: blue;
+  padding-right:0px;
+}
+/* sidebar */
+.sidecol{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 5%;
+    height: 970px;
+    background: #114483;
+    transition: all 500ms linear;
+}
 
 
 

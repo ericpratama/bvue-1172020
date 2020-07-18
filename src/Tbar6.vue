@@ -11,8 +11,8 @@
                 </li>
                 <li class="nav-item navitem mx-auto">
                   <a class="nav-link" href="#">
-                    <img v-if="counter== 'open' " src = "./assets/longicon1.svg" style="margin-right:5px">
-                    <img v-else-if="counter== 'close' " src = "./assets/sidebar_icon_1.svg" style="margin-right:5px">
+                    <img v-if="counter=='open' " src = "./assets/longicon1.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_1.svg" >
                   </a>
                 </li>
                 <li class="nav-item navitem mx-auto">
@@ -159,7 +159,7 @@
                                                 </b-form-input>
                                             </b-form-group>
                                         </b-col>
-                                       
+
                                     </b-row>
 <!-- ACCOUNT DETAILS-->
                                     <b-row>
@@ -248,26 +248,16 @@ export default {
 name: 'app',
     data() {
         return {
-            items: [
-            {
-                text: 'My Team',
-                href: '#'
-            },
-            {
-                text: 'Member Detail',
-                href: '#'
-            }
-            ],
             form: {
-                id: '',
                 password: '',
-                name: '',
                 cpassword: '',
+                id: '',
+                name: '',
                 username: '',
+                attribute1: '',
                 show: true,   
             },
             counter:'close',
-            image: ('../assets/sidebar_icon_1.svg')
         }
     },
     methods: {
@@ -276,18 +266,35 @@ name: 'app',
             // `event` is the native DOM event
             if (this.counter == 'close') {
                 this.counter = 'open'
-                alert('OPEN ' + this.counter + '!')
+                
                 document.getElementById("sidecol").style.width = "219px";
                 document.getElementById("sidecol").style.textAlign = 'left';
-                //document.getElementById("iconlong1").src = 'https://img.okeinfo.net/content/2020/04/09/612/2196853/ada-2-bentuk-wajah-gambar-apa-yang-pertama-kali-kamu-lihat-bDKERiX5np.jpg';
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
                 document.getElementById("sidecol").style.width = "5%";
-                alert('close ' + this.counter + '!')
+                
             }
+        },
+          onSubmit(evt) {
+          evt.preventDefault()
+          alert(JSON.stringify(this.form))
+        },
+        onReset(evt) {
+          evt.preventDefault()
+          // Reset our form values
+          this.form.email = ''
+          this.form.name = ''
+          this.form.food = null
+          this.form.checked = []
+          // Trick to reset/clear native browser form validation state
+          this.show = false
+          this.$nextTick(() => {
+            this.show = true
+          })
         }
-    }
+      }
+    
 }
 
 
@@ -305,6 +312,7 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
 }
 #app{
     background-color:#E5E5E5;
@@ -324,7 +332,8 @@ body{
 .tab-content{
     background-color: white;
     margin-left: 10px;
-    padding-top:10px;   
+    padding-top:10px;
+    text-align: left;
 }
 .tabs2{
   padding-left:5%;

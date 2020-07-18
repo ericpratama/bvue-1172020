@@ -310,6 +310,7 @@ body{
     background-color: white;
     padding-top:10px;   
     color:#555555;
+    
 }
 
 hr{

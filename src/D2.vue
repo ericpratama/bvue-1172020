@@ -288,7 +288,7 @@ body{
 .konten{
     padding-top: 30px;
     background-color: none;
-    
+    text-align: left;
 }
 
 hr{
