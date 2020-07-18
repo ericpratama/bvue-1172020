@@ -316,7 +316,7 @@ hr{
     width: 98%;
     height: 1px;
 }
-/* bagian text dan header dalam konten */
+/* bagian text dan header dalamdddd konten */
 .d4_header{
   font-family: Roboto;
   font-style: normal;
