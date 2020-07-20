@@ -1,7 +1,7 @@
 import Vue from 'vue'
 // import Sidebar from './Sidebar.vue'
 //import D2 from './Coba.vue'
-import Coba from './Details.vue'
+import Coba from './Tbar2.vue'
 
 //import App from './App.vue'
 
