@@ -48,7 +48,7 @@
               </ul>           
             </div>
             <div>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a href="#"><img  src="./assets/sidebar_icon_10.svg" style="margin-right:5px;"></a>
                 </li>
             </div>            
@@ -231,7 +231,7 @@
                             </b-tab>
                               <b-tab title="SCHEDULE"><p>I'm the second tab</p>
                                 <template v-slot:title>
-                                  <img class="sidebar_icon" src="./assets/tbar2schedule.svg" style="">
+                                  <img id="tabschedule" class="sidebar_icon" src="./assets/tbar2schedule.svg" >
                                 </template>
                               </b-tab>
                         </b-tabs>
@@ -360,9 +360,10 @@ hr{
   border: 0px solid transparent !important;
   /* border-top-left-radius: 1px !important;
   border-top-right-radius: 1px !important; */
-  border-top-left-radius: .80rem !important;
-  border-top-right-radius: .80rem !important;
-  /* border-radius: 8px 8px 0px 0px; */
+  /* border-top-left-radius: .80rem !important;
+  border-top-right-radius: .80rem !important; */
+  border-radius: 8px 8px 0px 0px !important;
+  
   text-align: center;
   width: 208px;
   height: 47px;

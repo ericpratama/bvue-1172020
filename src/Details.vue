@@ -138,7 +138,7 @@
                         <b-tabs class="tabs1" >
                             <b-tab  class="tabs2" title="ACCOUNT" active  style="backrground-color:red;">
                                 <b-row>
-                                    <b-col lg="11"><p>ss</p></b-col>
+                                    
                                     <b-col lg="1"></b-col>
                                 </b-row>
                                 <template v-slot:title>
@@ -264,7 +264,7 @@
                                       <b-form-group id="input-group-7" label="Create Password" label-for="input-7" description="At least 5 character long">
                                         <b-form-input
                                             id="input-7"
-                                            v-model="form2.password2"
+                                            v-model="form.password2"
                                             type="password"
                                             required
                                         >
@@ -277,7 +277,7 @@
                                         <b-form-group id="input-group-8" label="Confirm Password" label-for="input-8" description="Re-type your new password">
                                           <b-form-input
                                               id="input-8"
-                                              v-model="form2.cpassword2"
+                                              v-model="form.cpassword2"
                                               type="password"
                                               required
                                           >
@@ -339,12 +339,9 @@ name: 'app',
                 attribute1: '',
                 attribute2: '',
                 attribute3: '',
-                
+                password2:'',
+                cpassword2:',',
                 show: true,   
-            },
-            form2:{
-              password2: '',
-              cpassword2: '',
             },
             counter:'close',
         }
