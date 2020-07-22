@@ -4,10 +4,12 @@
         <!-- Sidebar -->
         <div class="row">
           <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div>
+            <div class="text-left">
               <ul class="nav flex-column">
-                <li class="nav-item navitem"> <!-- mx-auto -->
-                  <b-button v-on:click="greet" class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg"></b-button>
+                <li class="nav-item navitem">
+                  <a v-on:click="greet" class="nav-link" href="#">
+                    <img class="sidebar_icon" src="./assets/sidebar_icon_0.svg">
+                  </a>
                 </li>
                 <li class="nav-item navitem">
                   <a class="nav-link" href="#">
@@ -66,7 +68,7 @@
               </ul>           
             </div>
             <div>
-                <li class="nav-item navitem ">
+                <li class="nav-item navitem mx-auto">
                   <a href="#"><img  src="./assets/sidebar_icon_10.svg" style="margin-right:5px;"></a>
                 </li>
             </div>            
@@ -352,6 +354,7 @@ body{
     font-family: Roboto;
     font-style: normal;
     background-color: #f5f5f5;
+    
 }
 .konten{
     padding-top: 20px;
@@ -359,12 +362,11 @@ body{
 .tab-content{
     background-color: white;
     /* margin-left: 10px; */
+    padding-left:30px;
     padding-top:10px;
     text-align: left;
 }
-.tabs2{
-  padding-left:2%;
-}
+
 hr{
     position: absolute;
     background: #C4C4C4;
@@ -413,7 +415,6 @@ hr{
 }
 .nav-tabs .nav-link{
   border: 0px solid transparent !important;
-  
   border-top-left-radius: .25rem !important;
   border-top-right-radius: .25rem !important;
   text-align: center;
@@ -422,14 +423,20 @@ hr{
   background-color: #f1f1f1 ;
   margin-right: 28px;
 }
+.nav-link.active, .nav-item.show .nav-link {
+  padding-left: 0px !important;
+}
 /* geser kiri dan menghilangkan border pada tabs + ganti juga di tab content */
 .nav-item{
   margin-left:0px;
   margin-bottom: 0px !important;
 }
+/* header tabs and NAVS */
 .nav-tabs{
-border-bottom: 0px solid transparent !important;
+  border-bottom: 0px solid transparent !important;
+  padding-left: 0px !important;
 }
+
 a {
   color: #555555 !important;
   text-decoration: none;
@@ -480,8 +487,4 @@ a {
   line-height: 24px;
 }
 /* button */
-.navitem {
-  margin-left: auto;
-  margin-right: auto;
-}
 </style>

@@ -8,9 +8,7 @@
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
                   <a v-on:click="greet" class="nav-link" href="#">
-                    
                       <img class="sidebar_icon" src="./assets/sidebar_icon_0.svg">
-                  
                   </a>
                 </li>
                 <li class="nav-item navitem">
