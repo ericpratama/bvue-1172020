@@ -45,7 +45,7 @@
                     <img v-if="counter=='close' " src = "./assets/sidebar_icon_6.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem ">
+                <li lass="nav-item navitem ">
                   <a class="nav-link" href="#">
                     <img v-if="counter=='open' " src = "./assets/longicon7.svg" >
                     <img v-if="counter=='close' " src = "./assets/sidebar_icon_7.svg" >
@@ -126,12 +126,12 @@
                   </div>
                     <!-- percobaan col dan row -->
                     <div class="konten">
-                        <b-tabs>
-                            <b-tab title="ACCOUNT" active>
+                        <b-tabs class="tabs1" >
+                            <b-tab class="tabs2" title="ACCOUNT" active>
                               <template v-slot:title>
                                 <img class="sidebar_icon" src="./assets/tbar3account.svg" style="">
                               </template>
-                                <b-form @submit="onSubmit" @reset="onReset">
+                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
                                     <p class="d4_header">Change Password</p>
                                     <b-row>
                                         <b-col lg="5">
@@ -158,6 +158,7 @@
                                                 </b-form-input>
                                             </b-form-group>
                                         </b-col>
+                                       
                                     </b-row>
 <!-- ACCOUNT DETAILS-->             <p class="d4_header">Account Details</p>
                                     <b-row>
@@ -221,7 +222,6 @@
                                         <!-- Main Content Start-->
                                         
                                     </b-row>
-                                    <!-- button save and cancel -->
                                     <b-row style="padding-bottom:40px;">
                                       <b-col lg="9">
                                       </b-col>
@@ -241,6 +241,7 @@
                                             
                                         </div>
                                       </b-col>
+                                       
                                     </b-row>
                                 </b-form>
                             </b-tab>
@@ -298,8 +299,8 @@ name: 'app',
             if (this.counter == 'close') {
                 this.counter = 'open'
                 document.getElementById("sidecol").style.width = "219px";
-                
-                document.getElementsByClassName("nav-item").style.marginLeft = "100px";
+                document.getElementById("cx").style.marginLeft = "0px";
+                document.getElementsByClassName("cz").style.marginLeft = "100px";
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
@@ -445,6 +446,7 @@ a {
     padding-left: 0px;
     padding-right: 0px;
     width: 5%;
+    
     background: #114483;
     transition: all 500ms linear;
 }
@@ -479,7 +481,6 @@ a {
   font-size: 16px;
   line-height: 24px;
 }
-/* button */
 .navitem {
   margin-left: auto;
   margin-right: auto;
