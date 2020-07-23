@@ -3,47 +3,67 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div>
+          <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
+            <div class="text-left">
               <ul class="nav flex-column">
-                <li class="nav-item navitem mx-auto">
-                  <b-button v-b-toggle.sidebar-1 class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg" style="margin-right:5px"></b-button>
-                  <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-                    <div class="px-3 py-2">
-                      <p>
-                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                      </p>
-                      <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-                    </div>
-                  </b-sidebar>
+                <li class="nav-item navitem">
+                  <a v-on:click="greet" class="nav-link" href="#">
+                      <img class="sidebar_icon" src="./assets/sidebar_icon_0.svg">
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_1.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon1.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_1.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_2.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon2.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_2.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_3.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon3.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_3.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_4.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon4.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_4.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_5.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon5.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_5.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_6.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon6.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_6.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_7.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon7.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_7.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_8.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon8.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_8.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_9.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon9.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_9.svg" >
+                  </a>
                 </li>
               </ul>           
             </div>
@@ -98,7 +118,6 @@
             <div class="main_kontener">
                               <!-- Main Content Start-->
                 <b-container fluid>
-                    <p>cek</p>
                     <b-row>
                         <b-col lg="11">
                             <b-breadcrumb :items="items"></b-breadcrumb>
@@ -138,6 +157,7 @@
                                         type="password"
                                         required
                                     >
+                                    
                                     </b-form-input>
                                 </b-form-group>
                             </b-col>
@@ -186,30 +206,33 @@
                                     </b-form-input>
                                 </b-form-group>
                             </b-col>
-                            <b-col lg="1">
+                            <b-col lg="5">
+                              
                             </b-col>
                         </b-row>
-                                  <!-- row 3 end-->
-                                  <!-- row button -->
-                        <b-row>
-                            <b-col lg="9">
+                        <!-- row 3 end-->
+                        <!-- row button -->
+                        <b-row style="padding-bottom:40px;">
+                          <b-col lg="9">
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a>
+                                <b-button id="buttoncancel" class="buttonstyle">Cancel</b-button>
+                              </a>
                                 
-                            </b-col>
-                            <b-col lg="1">
-                                <div class="text-right">
-                                    <b-button style="color:#114483; background-color:white; border-color:#114483;">Cancel</b-button>
-                                </div>
-                            </b-col>
-                            <b-col lg="1">
-                                <div class="text-right">
-                                    <b-button type="submit" style="background-color:#114483;">Save</b-button>
-                                </div>
-                            </b-col>
-                            <b-col lg="1">
+                            </div>
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a >
+                                <b-button id="buttonsave" class="buttonstyle" type="submit">Save</b-button>
+                              </a>
                                 
-                            </b-col>
+                            </div>
+                          </b-col>
                         </b-row>
-                          <!-- row button -->
+                        <!-- row button -->
                     </b-form>
                 </b-container>
                             <!-- Main Content Start-->
@@ -244,31 +267,68 @@ export default {
                 cpassword: '',
                 username: '',
                 show: true,
-                
-                }
+                },
+                counter:'close'
             }
         },
         methods: {
-            onSubmit(evt) {
-                evt.preventDefault()
-                alert(JSON.stringify(this.form))
-            },
-            onReset(evt) {
-                evt.preventDefault()
-                // Reset our form values
-                this.form.id = ''
-                this.form.password = ''
-                this.form.name = ''
-                this.form.cpassword = ''
-                this.form.username = ''
-                // Trick to reset/clear native browser form validation state
-                this.show = false
-                this.$nextTick(() => {
-                this.show = true
-                })
+        greet: function () {
+            // `this` inside methods points to the Vue instance
+            // `event` is the native DOM event
+            if (this.counter == 'close') {
+                this.counter = 'open'
+                document.getElementById("sidecol").style.width = "219px";
+                
+                
             }
+            else if (this.counter == 'open'){
+                this.counter = 'close'
+                document.getElementById("sidecol").style.width = "5%";
+
+                
+            }
+        },
+        onSubmit(evt) {
+          evt.preventDefault()
+          alert(JSON.stringify(this.form))
+        },
+        onReset(evt) {
+          evt.preventDefault()
+          // Reset our form values
+          this.form.email = ''
+          this.form.name = ''
+          this.form.food = null
+          this.form.checked = []
+          // Trick to reset/clear native browser form validation state
+          this.show = false
+          this.$nextTick(() => {
+            this.show = true
+          })
         }
+        
+        
+      }
 }
+// methods: {
+//             onSubmit(evt) {
+//                 evt.preventDefault()
+//                 alert(JSON.stringify(this.form))
+//             },
+//             onReset(evt) {
+//                 evt.preventDefault()
+//                 // Reset our form values
+//                 this.form.id = ''
+//                 this.form.password = ''
+//                 this.form.name = ''
+//                 this.form.cpassword = ''
+//                 this.form.username = ''
+//                 // Trick to reset/clear native browser form validation state
+//                 this.show = false
+//                 this.$nextTick(() => {
+//                 this.show = true
+//                 })
+//             }
+//         }
 </script>
 <style>
 body{
@@ -297,5 +357,60 @@ hr{
     width: 98%;
     height: 1px;
 }
+.sidecol{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 5%;
+    background: #114483;
+    transition: all 500ms linear;
+}
+.buttonstyle{
+  float: right;
+}
+#buttoncancel{
+  width:114px;
+  height: 40px;
+  color:#114483; background-color:white;
+  border-color:#114483;
+  margin-right:12px;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+#buttonsave{
+  width:99px;
+  height: 40px;
+  background-color:#114483;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
 
+
+/* eye */
+.input-icons i { 
+            position: absolute; 
+        } 
+          
+        .input-icons { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        } 
+          
+        .icon { 
+            padding: 10px; 
+            min-width: 40px; 
+        } 
+          
+        .input-field { 
+            width: 100%; 
+            padding: 10px; 
+            text-align: center; 
+        } 
 </style>

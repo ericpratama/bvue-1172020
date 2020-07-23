@@ -137,7 +137,12 @@
                         <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
                       </div>
                       <b-form @submit="onSubmit" @reset="onReset">
-                        <p class="d4_header">Account Details</p>
+                        
+                        <b-row>
+                          <b-col lg="5"><p class="d4_header">Account Details</p></b-col>
+                          <b-col lg="2"></b-col>
+                          <b-col lg="5"><p class="d4_header">Change Password</p></b-col>
+                        </b-row>
                         <b-row>
                           <b-col lg="5">
                             <b-form-group id="input-group-1" label="ID" label-for="input-1" description="You can not change this field" disabled>
@@ -342,10 +347,13 @@ hr{
 }
 /* bagian text dan header dalam konten */
 .d4_header{
-    font-family: Roboto;
+    font-family: Montserrat;
     font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+    color: #555555;
 }
 .d-block{
     font-family: Roboto;
