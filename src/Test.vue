@@ -154,170 +154,166 @@
                       <div>
                         <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
                       </div>
-                      <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
-                                    <b-row>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-1" label="ID" label-for="input-1" description="You can not change this field">
-                                                <b-form-input
-                                                    id="input-1"
-                                                    v-model="form.id"
-                                                    required
-                                                    readonly
-                                                    placeholder="JKT0003"
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-2" label="Name" label-for="input-2">
-                                                <b-form-input
-                                                    id="input-2"
-                                                    v-model="form.name"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                    </b-row>
-<!-- ACCOUNT DETAILS-->
-                                    <b-row>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-3" label="User Name" label-for="input-3" description="You can not change this field"> 
-                                                <b-form-input
-                                                    id="input-3"
-                                                    v-model="form.username"
-                                                    required
-                                                    readonly
-                                                    placeholder="RikaJKT"
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-4" label="Attribute 1" label-for="input-4">
-                                                <b-form-input
-                                                    id="input-4"
-                                                    v-model="form.attribute1"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                    </b-row>
-                                    <b-row>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-5" label="Attribute 2" label-for="input-5">
-                                                <b-form-input
-                                                    id="input-5"
-                                                    v-model="form.attribute2"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-6" label="Attribute 3" label-for="input-6">
-                                                <b-form-input
-                                                    id="input-6"
-                                                    v-model="form.attribute3"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                        
-                                    </b-row>
-                                    <!-- --------- -->
-                                    <b-row>
-                                    <b-col lg="9"> 
-                                    </b-col>
-                                    <b-col lg="1">
-                                        <div class="text-right">
-                                            <b-button style="color:#114483; background-color:white; border-color:#114483; ">Cancel</b-button>
-                                        </div>
-                                    </b-col>
-                                    <b-col lg="1">
-                                        <div class="text-right">
-                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
-                                        </div>
-                                    </b-col>
-                                    <b-col lg="1">
-
-                                    </b-col>
-                                    </b-row>
-                                </b-form>
-                            </b-tab>
-                            <b-tab title="CHANGE PASSWORD">
-                                <template v-slot:title>
-                                    <img class="sidebar_icon" src="./assets/changepassword.svg" style="margin-right:5px"> Change Password
-                                </template>
-                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
-                                  <p class="d4_header">Change Password</p>
-                                  <b-row>
-                                    <b-col lg="5">
-                                      <b-form-group id="input-group-7" label="Create Password" label-for="input-7" description="At least 5 character long">
-                                        <b-form-input
-                                            id="input-7"
-                                            v-model="form.password2"
-                                            type="password"
-                                            required
-                                        >
-                                        </b-form-input>
-                                      </b-form-group>
-                                      </b-col>
-                                      <b-col lg="1">
-                                      </b-col>
-                                      <b-col lg="5">
-                                        <b-form-group id="input-group-8" label="Confirm Password" label-for="input-8" description="Re-type your new password">
-                                          <b-form-input
-                                              id="input-8"
-                                              v-model="form.cpassword2"
-                                              type="password"
-                                              required
-                                          >
-                                          </b-form-input>
-                                        </b-form-group>
-                                    </b-col>
-                                  </b-row>
-                                  <b-row>
-                                    <b-col lg="9"> 
-                                    </b-col>
-                                    <b-col lg="1">
-                                        <div class="text-right">
-                                            <b-button style="color:#114483; background-color:white; border-color:#114483; ">Cancel</b-button>
-                                        </div>
-                                    </b-col>
-                                    <b-col lg="1">
-                                        <div class="text-right">
-                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
-                                        </div>
-                                    </b-col>
-                                    <b-col lg="1">
-
-                                    </b-col>
-                                    </b-row>
-                                </b-form>
-                            </b-tab>
-                            <b-tab title="SCHEDULE">
-                                <p>I'm the third tab</p>
-                                <template v-slot:title>
-                                    <img class="sidebar_icon" src="./assets/d9schedule.svg" style="margin-right:5px">
-                                </template>
-                            </b-tab>
-                            
-                        </b-tabs>
+                      <b-form @submit="onSubmit" @reset="onReset">
+                        
+                       
+                        <b-row>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-1" label="ID" label-for="input-1" description="You can not change this field" disabled>
+                              <b-form-input
+                                id="input-1"
+                                v-model="form.id"
+                                required
+                                type="text"
+                                readonly 
+                                placeholder="JKT0001"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                          <b-col lg="2"></b-col>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-2" label="Name" label-for="input-2">
+                              <b-form-input
+                                id="input-2"
+                                v-model="form.name"
+                                required
+                                type="text"
+                                placeholder="Rika Sulistiyawati"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                        </b-row>
+                        <b-row>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-3" label="User Name" label-for="input-3">
+                              <b-form-input
+                                id="input-3"
+                                v-model="form.username"
+                                required
+                                type="text"
+                                readonly 
+                                placeholder="RikaJKT"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                          <b-col lg="2"></b-col>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-4" label="Attribute 1" label-for="input-4">
+                              <b-form-input
+                                  id="input-4"
+                                  v-model="form.attribute1"
+                                  required
+                                  type="text"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                        </b-row>
+                        <b-row>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-5" label="Attribute 2" label-for="input-5">
+                              <b-form-input
+                                  id="input-5"
+                                  v-model="form.attribute2"
+                                  required
+                                  type="text"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                          <b-col lg="2"></b-col>
+                          <b-col lg="5">
+                            <b-form-group id="input-group-6" label="Attribute 3" label-for="input-6">
+                              <b-form-input
+                                  id="input-6"
+                                  v-model="form.attribute3"
+                                  required
+                                  type="text"
+                              >
+                              </b-form-input>
+                            </b-form-group>
+                          </b-col>
+                        </b-row>
+                        <!-- button save and cancel -->
+                        <b-row style="padding-bottom:40px;">
+                          <b-col lg="10">
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a><b-button id="buttoncancel" class="buttonstyle">Cancel</b-button></a>
+                            </div>
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a ><b-button id="buttonsave" class="buttonstyle" type="submit">Save</b-button></a>
+                            </div>
+                          </b-col>
+                        </b-row>
+                      </b-form>
+                    </b-tab>
+                    <b-tab title="CHANGE PASSWORD">
+                        <template v-slot:title>
+                            <img class="sidebar_icon" src="./assets/changepassword.svg" style="margin-right:5px"> Change Password
+                        </template>
+                        <div>
+                          <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
+                        </div>
+                        <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
+                          <b-row>
+                            <b-col lg="5">
+                              <b-form-group id="input-group-7" label="Create Password" label-for="input-7" description="At least 5 character long">
+                                <b-form-input
+                                    id="input-7"
+                                    v-model="form.password2"
+                                    type="password"
+                                    required
+                                >
+                                </b-form-input>
+                              </b-form-group>
+                              </b-col>
+                              <b-col lg="2">
+                              </b-col>
+                              <b-col lg="5">
+                                <b-form-group id="input-group-8" label="Confirm Password" label-for="input-8" description="Re-type your new password">
+                                  <b-form-input
+                                      id="input-8"
+                                      v-model="form.cpassword2"
+                                      type="password"
+                                      required
+                                  >
+                                  </b-form-input>
+                                </b-form-group>
+                            </b-col>
+                          </b-row>
+                          <b-row style="padding-bottom:40px;">
+                          <b-col lg="10">
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a><b-button id="buttoncancel" class="buttonstyle">Cancel</b-button></a>
+                            </div>
+                          </b-col>
+                          <b-col lg="1">
+                            <div class="text-right">
+                              <a ><b-button id="buttonsave" class="buttonstyle" type="submit">Save</b-button></a>
+                            </div>
+                          </b-col>
+                        </b-row>
+                        </b-form>
+                    </b-tab>
+                    <b-tab title="SCHEDULE">
+                      <p>I'm the third tab</p>
+                      <template v-slot:title>
+                          <img class="sidebar_icon" src="./assets/d9schedule.svg" style="margin-right:5px">
+                      </template>
+                      <div>
+                        <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
+                      </div>
+                    </b-tab>
+                  </b-tabs>
                 </div>
               </b-container>
             <!-- Main Content Start-->
@@ -335,6 +331,16 @@ export default {
 name: 'app',
     data() {
         return {
+            items: [
+              {
+                  text: 'My Team',
+                  href: '#'
+              },
+              {
+                  text: 'Add Member',
+                  active: true
+              }
+            ],
             form: {
                 id: '',
                 name: '',
@@ -357,7 +363,7 @@ name: 'app',
                 this.counter = 'open'
                 
                 document.getElementById("sidecol").style.width = "219px";
-                document.getElementById("sidecol").style.textAlign = 'left';
+                
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
