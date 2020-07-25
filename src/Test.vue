@@ -4,66 +4,80 @@
         <!-- Sidebar -->
         <div class="row">
           <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div>
+            <div class="text-left" style="padding-left:15px;">
               <ul class="nav flex-column">
-                <li class="nav-item navitem mx-auto" id="example-2">
-                  <b-button v-on:click="greet" class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg" style="margin-right:5px"></b-button>
+                <li class="nav-item navitem">
+                  <a v-on:click="greet" class="nav-link" href="#">
+                      <img class="sidebar_icon" src="./assets/sidebar_icon_0.svg">
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                
+                <li class="nav-item navitem">
                   <a class="nav-link" href="#">
                     <img v-if="counter=='open' " src = "./assets/longicon1.svg" >
                     <img v-if="counter=='close' " src = "./assets/sidebar_icon_1.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_2.svg" style="margin-right:5px"> -->
-                    <img v-if="counter=='open' " src = "./assets/longicon1.svg" style="margin-right:5px">
-                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_2.svg" style="margin-right:5px">
+                    <img v-if="counter=='open' " src = "./assets/longicon2.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_2.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_3.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon3.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_3.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_4.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon4.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_4.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_5.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon5.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_5.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_6.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon6.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_6.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_7.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon7.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_7.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_8.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon8.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_8.svg" >
                   </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
+                <li class="nav-item navitem ">
                   <a class="nav-link" href="#">
-                    <!-- <img class="sidebar_icon" src="./assets/sidebar_icon_9.svg" style="margin-right:5px"> -->
+                    <img v-if="counter=='open' " src = "./assets/longicon9.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_9.svg" >
                   </a>
                 </li>
-              </ul>           
+              </ul>
             </div>
-            <div>
-                <li class="nav-item navitem mx-auto">
-                  <a href="#"><img  src="./assets/sidebar_icon_10.svg" style="margin-right:5px;"></a>
+            <div class="text-center">
+              <ul class="nav flex-column">
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon10.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_10.svg" >
+                  </a>
                 </li>
-            </div>            
+              </ul>
+            </div>          
           </div>
 
           <!-- Navbar-->
@@ -108,69 +122,47 @@
             
             <!-- Main Content Start-->
             <div>
-                              <!-- Main Content Start-->
-                <b-container fluid class="main_kontener">
-                    <b-row>
-                        <b-col lg="11">
-                            <b-breadcrumb :items="items"></b-breadcrumb>
-                        </b-col>
-                        <b-col lg="1">
-                            
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col lg="11">
-                            <hr>
-                        </b-col>
-                        <b-col lg="1">
-                            
-                        </b-col>
-                    </b-row>
-                    <div class="konten">
-                        <b-tabs class="tabs1" >
-                            <b-tab  class="tabs2" title="ACCOUNT" active>
-                              <template v-slot:title>
-                                <img class="sidebar_icon" src="./assets/d4textaccount.svg" style="">
-                              </template>
-                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
-                                    <p class="d4_header">Change Password</p>
+            <!-- Main Content Start-->
+              <b-container fluid class="main_kontener">
+                <div>
+                  <b-row>
+                    <b-col lg="3">
+                      <b-breadcrumb :items="items"></b-breadcrumb>
+                    </b-col>
+                    
+                    <b-col lg="9">
+                      <div class="custom-control custom-switch text-right" style="margin-top:15px;">
+                        <input type="checkbox" class="custom-control-input" id="customSwitches">
+                        <label class="custom-control-label" for="customSwitches"></label>
+                      </div>
+                    </b-col>
+                    
+                  </b-row>
+                  
+                </div>
+                <div>
+                  <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
+                </div>
+                <div class="konten">
+                  <b-tabs>
+                    <b-tab>
+                      <template v-slot:title>
+                        <a>
+                          <img class="sidebar_icon" src="./assets/d9account.svg">
+                        </a>
+                      </template>
+                      <div>
+                        <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
+                      </div>
+                      <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
                                     <b-row>
                                         <b-col lg="5">
-                                            <b-form-group id="input-group-1" label="Create Password" label-for="input-1" description="At least 5 character long">
+                                            <b-form-group id="input-group-1" label="ID" label-for="input-1" description="You can not change this field">
                                                 <b-form-input
                                                     id="input-1"
-                                                    v-model="form.password"
-                                                    type="password"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-                                        <b-col lg="1">
-                                        </b-col>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-2" label="Confirm Password" label-for="input-2" description="Re-type your new password">
-                                                <b-form-input
-                                                    id="input-2"
-                                                    v-model="form.cpassword"
-                                                    type="password"
-                                                    required
-                                                >
-                                                </b-form-input>
-                                            </b-form-group>
-                                        </b-col>
-
-                                    </b-row>
-<!-- ACCOUNT DETAILS-->
-                                    <b-row>
-                                        <b-col lg="5">
-                                            <b-form-group id="input-group-3" label="ID" label-for="input-3" description="You can not change this field" disabled>
-                                                <b-form-input
-                                                    id="input-3"
                                                     v-model="form.id"
                                                     required
-                                                    type="text"
-                                                    readonly 
+                                                    readonly
                                                     placeholder="JKT0003"
                                                 >
                                                 </b-form-input>
@@ -179,30 +171,28 @@
                                         <b-col lg="1">
                                         </b-col>
                                         <b-col lg="5">
-                                            <b-form-group id="input-group-4" label="Name" label-for="input-4">
+                                            <b-form-group id="input-group-2" label="Name" label-for="input-2">
                                                 <b-form-input
-                                                    id="input-4"
+                                                    id="input-2"
                                                     v-model="form.name"
                                                     required
-                                                    placeholder="Rika Sulistiyawati"
                                                 >
                                                 </b-form-input>
                                             </b-form-group>
                                         </b-col>
-                                        
+                                        <b-col lg="1">
+                                        </b-col>
                                     </b-row>
-                                    <!-- --------- -->
-                                    <p class="d4_header">Account Details</p>
-                                    <b-row class="row_ac_detail">
+<!-- ACCOUNT DETAILS-->
+                                    <b-row>
                                         <b-col lg="5">
-                                            <b-form-group id="input-group-5" label="User Name" label-for="input-5" description="You can not change this field" disabled>
+                                            <b-form-group id="input-group-3" label="User Name" label-for="input-3" description="You can not change this field"> 
                                                 <b-form-input
-                                                    id="input-5"
+                                                    id="input-3"
                                                     v-model="form.username"
                                                     required
-                                                    type="text"
-                                                    readonly 
-                                                    placeholder="RikaJOG"
+                                                    readonly
+                                                    placeholder="RikaJKT"
                                                 >
                                                 </b-form-input>
                                             </b-form-group>
@@ -210,32 +200,129 @@
                                         <b-col lg="1">
                                         </b-col>
                                         <b-col lg="5">
-                                            <b-form-group id="input-group-6" label="attribute1" label-for="input-6">
+                                            <b-form-group id="input-group-4" label="Attribute 1" label-for="input-4">
                                                 <b-form-input
-                                                    id="input-1"
+                                                    id="input-4"
                                                     v-model="form.attribute1"
                                                     required
-                                                    placeholder="Atribute"
                                                 >
                                                 </b-form-input>
                                             </b-form-group>
                                         </b-col>
-                                        <!-- Main Content Start-->
+                                        <b-col lg="1">
+                                        </b-col>
+                                    </b-row>
+                                    <b-row>
+                                        <b-col lg="5">
+                                            <b-form-group id="input-group-5" label="Attribute 2" label-for="input-5">
+                                                <b-form-input
+                                                    id="input-5"
+                                                    v-model="form.attribute2"
+                                                    required
+                                                >
+                                                </b-form-input>
+                                            </b-form-group>
+                                        </b-col>
+                                        <b-col lg="1">
+                                        </b-col>
+                                        <b-col lg="5">
+                                            <b-form-group id="input-group-6" label="Attribute 3" label-for="input-6">
+                                                <b-form-input
+                                                    id="input-6"
+                                                    v-model="form.attribute3"
+                                                    required
+                                                >
+                                                </b-form-input>
+                                            </b-form-group>
+                                        </b-col>
+                                        <b-col lg="1">
+                                        </b-col>
                                         
+                                    </b-row>
+                                    <!-- --------- -->
+                                    <b-row>
+                                    <b-col lg="9"> 
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button style="color:#114483; background-color:white; border-color:#114483; ">Cancel</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+
+                                    </b-col>
                                     </b-row>
                                 </b-form>
                             </b-tab>
-                              <b-tab title="SCHEDULE"><p>I'm the second tab</p>
+                            <b-tab title="CHANGE PASSWORD">
                                 <template v-slot:title>
-                                  <img class="sidebar_icon" src="./assets/d4textschedule.svg" style="">
+                                    <img class="sidebar_icon" src="./assets/changepassword.svg" style="margin-right:5px"> Change Password
                                 </template>
-                              </b-tab>
+                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
+                                  <p class="d4_header">Change Password</p>
+                                  <b-row>
+                                    <b-col lg="5">
+                                      <b-form-group id="input-group-7" label="Create Password" label-for="input-7" description="At least 5 character long">
+                                        <b-form-input
+                                            id="input-7"
+                                            v-model="form.password2"
+                                            type="password"
+                                            required
+                                        >
+                                        </b-form-input>
+                                      </b-form-group>
+                                      </b-col>
+                                      <b-col lg="1">
+                                      </b-col>
+                                      <b-col lg="5">
+                                        <b-form-group id="input-group-8" label="Confirm Password" label-for="input-8" description="Re-type your new password">
+                                          <b-form-input
+                                              id="input-8"
+                                              v-model="form.cpassword2"
+                                              type="password"
+                                              required
+                                          >
+                                          </b-form-input>
+                                        </b-form-group>
+                                    </b-col>
+                                  </b-row>
+                                  <b-row>
+                                    <b-col lg="9"> 
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button style="color:#114483; background-color:white; border-color:#114483; ">Cancel</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+                                        <div class="text-right">
+                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
+                                        </div>
+                                    </b-col>
+                                    <b-col lg="1">
+
+                                    </b-col>
+                                    </b-row>
+                                </b-form>
+                            </b-tab>
+                            <b-tab title="SCHEDULE">
+                                <p>I'm the third tab</p>
+                                <template v-slot:title>
+                                    <img class="sidebar_icon" src="./assets/d9schedule.svg" style="margin-right:5px">
+                                </template>
+                            </b-tab>
+                            
                         </b-tabs>
-                    </div>
-                </b-container>
-                            <!-- Main Content Start-->
+                </div>
+              </b-container>
+            <!-- Main Content Start-->
             </div>
-                              <!-- Main Content End-->
+                            <!-- Main Content End-->
 
           </div>
         </div>
@@ -249,12 +336,14 @@ name: 'app',
     data() {
         return {
             form: {
-                password: '',
-                cpassword: '',
                 id: '',
                 name: '',
                 username: '',
                 attribute1: '',
+                attribute2: '',
+                attribute3: '',
+                password2:'',
+                cpassword2:',',
                 show: true,   
             },
             counter:'close',
@@ -276,7 +365,7 @@ name: 'app',
                 
             }
         },
-          onSubmit(evt) {
+        onSubmit(evt) {
           evt.preventDefault()
           alert(JSON.stringify(this.form))
         },
@@ -293,15 +382,11 @@ name: 'app',
             this.show = true
           })
         }
+        
+        
       }
     
 }
-
-
-
-
-
-
 </script>
 <style>
 body{
@@ -312,32 +397,25 @@ body{
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    text-align: left;
 }
 #app{
-    background-color:#E5E5E5;
+    background-color: white;;
 }
 .main_kontener{
     padding-left:50px !important;
-    padding-right: 50px !important;
+    padding-right:50px !important;
+    padding-right: 50px;
     background-color: none;
     padding-top:20px;
     font-family: Roboto;
     font-style: normal;
-    background-color: #f5f5f5;
 }
-.konten{
-    padding-top: 60px;
-}
+
 .tab-content{
     background-color: white;
-    margin-left: 10px;
-    padding-top:10px;
-    text-align: left;
-}
-.tabs2{
-  padding-left:5%;
-  padding-right:5%;
+    padding-top:10px;   
+    color:#555555;
+    
 }
 hr{
     position: absolute;
@@ -347,67 +425,96 @@ hr{
 }
 /* bagian text dan header dalam konten */
 .d4_header{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color:#555555;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.5px;
+    color: #555555;
 }
-
 .d-block{
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: #555555;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
 }
 .form-text{
-  color:red;
+    color:blue !important;
 }
 .text-muted{
-  color:red;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 19px;
+    color:blue !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
 }
-/* bagian text dan header dalam konten */
-.nav-tabs .nav-link.active, .nav-item.show .nav-link {
-  text-align: center;
-  width: 208px;
-  height: 90px;
-  color: #114483 !important;
-  border-color: #dee2e6 #dee2e6 #fff !important;
-  border-top: 5px solid #114483 !important;
-}
-.nav-tabs .nav-link{
-  border: 0px solid transparent !important;
-  border-top-left-radius: 1px !important;
-  border-top-right-radius: 1px !important;
-  text-align: center;
-  width: 208px;
-  height: 90px;
-}
-a {
-  color: #555555 !important;
-  text-decoration: none;
-  background-color: transparent;
+/* header tabs and NAVS */
+.nav-tabs{
+    border-bottom: 0px solid transparent !important;
+    padding-left: 0px !important;
 }
 
-.ujung{
-  background-color: blue;
-  padding-right:0px;
+/* bagian text dan header dalam konten */
+.nav-link.active, .nav-item.show .nav-link {
+    color: #114483 !important;
+    border-color: #dee2e6 #dee2e6 #fff !important;
+    border-bottom: 5px solid #114483 !important;
+    padding-left: 0px !important;
 }
+.nav-link{
+    margin-right: 66px;
+    border: 0px solid transparent !important;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding:0px
+}
+a {
+    color: #9D9D9D !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+/* header tabs and NAVS */
+
+/* button */
+.buttonstyle{
+  float: right;
+}
+#buttoncancel{
+  width:114px;
+  height: 40px;
+  color:#114483; background-color:white;
+  border-color:#114483;
+  margin-right:12px;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+#buttonsave{
+  width:99px;
+  height: 40px;
+  background-color:#114483;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* button */
+
 /* sidebar */
 .sidecol{
     padding-left: 0px;
     padding-right: 0px;
     width: 5%;
-    height: 970px;
     background: #114483;
     transition: all 500ms linear;
 }
+
 </style>

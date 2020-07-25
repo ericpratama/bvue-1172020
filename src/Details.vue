@@ -307,7 +307,7 @@
                             <b-tab title="SCHEDULE">
                                 <p>I'm the third tab</p>
                                 <template v-slot:title>
-                                    <img class="sidebar_icon" src="./assets/d9schedule.svg" style="margin-right:5px"> Schedule
+                                    <img class="sidebar_icon" src="./assets/d9schedule.svg" style="margin-right:5px">
                                 </template>
                             </b-tab>
                             

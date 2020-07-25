@@ -3,59 +3,84 @@
     <div class="container-fluid">
         <!-- Sidebar -->
         <div class="row">
-          <div class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div>
+          <div id="sidecol" class="d-flex flex-column justify-content-between" style="background: #114483">
+            <div class="text-left">
               <ul class="nav flex-column">
-                <li class="nav-item navitem mx-auto">
-                  <b-button v-b-toggle.sidebar-1 class="my_text_button"><img class="sidebar_icon" src="./assets/sidebar_icon_0.svg" style="margin-right:5px"></b-button>
-                  <b-sidebar id="sidebar-1" title="Sidebar" shadow>
-                    <div class="px-3 py-2">
-                      <p>
-                        Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-                        in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                      </p>
-                      <b-img src="https://picsum.photos/500/500/?image=54" fluid thumbnail></b-img>
-                    </div>
-                  </b-sidebar>
+                <li class="nav-item navitem">
+                  <a v-on:click="greet" class="nav-link" href="#">
+                    <img class="sidebar_icon" src="./assets/sidebar_icon_0.svg">
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_1.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon1.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_1.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_2.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon2.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_2.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_3.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon3.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_3.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_4.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon4.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_4.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_5.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon5.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_5.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_6.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon6.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_6.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_7.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon7.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_7.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_8.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon8.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_8.svg" >
+                  </a>
                 </li>
-                <li class="nav-item navitem mx-auto">
-                  <a class="nav-link" href="#"><img class="sidebar_icon" src="./assets/sidebar_icon_9.svg" style="margin-right:5px"></a>
+                <li class="nav-item navitem ">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon9.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_9.svg" >
+                  </a>
                 </li>
               </ul>           
             </div>
             <div>
-                <li class="nav-item navitem mx-auto">
-                  <a href="#"><img  src="./assets/sidebar_icon_10.svg" style="margin-right:5px;"></a>
+              <ul class="nav flex-column icon10">
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon10.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_10.svg" >
+                  </a>
                 </li>
+              </ul>
             </div>            
           </div>
 
           <!-- Navbar-->
-          <div class="col navcol">
+          <div class="col navcol" style="background-color:#f5f5f5;">
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#EBEBEB;">
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
@@ -98,30 +123,23 @@
             <div>
                               <!-- Main Content Start-->
                 <b-container fluid class="main_kontener">
-                    <b-row>
-                        <b-col lg="11">
-                            <b-breadcrumb :items="items"></b-breadcrumb>
-                        </b-col>
-                        <b-col lg="1">
-                            
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col lg="11">
-                            <hr>
-                        </b-col>
-                        <b-col lg="1">
-                            
-                        </b-col>
-                    </b-row>
+                  <div>
+                    <b-breadcrumb :items="items"></b-breadcrumb>
+                  </div>
+                  <div>
+                    <div  class="testing" >
+                      <p style="width:100%;height:1px;background-color:#C4C4C4;margin-top:24px;"></p>
+                    </div>
+                  </div>
+                    <!-- percobaan col dan row -->
                     <div class="konten">
-                        <b-tabs class="tabs1" >
-                            <b-tab  class="tabs2" title="ACCOUNT" active>
+                        <b-tabs>
+                            <b-tab title="ACCOUNT" active>
                               <template v-slot:title>
-                                <img class="sidebar_icon" src="./assets/d4textaccount.svg" style="">
+                                <img class="sidebar_icon" src="./assets/d4account.svg" style="">
                               </template>
-                                <b-form class="tabs3"  @submit="onSubmit" @reset="onReset">
-                                    <p class="d4_header">Change Password</p>
+                                <b-form @submit="onSubmit" @reset="onReset">
+                                    <p class="d4_header" style="padding-top:40px;">Change Password</p>
                                     <b-row>
                                         <b-col lg="5">
                                             <b-form-group id="input-group-1" label="Create Password" label-for="input-1" description="At least 5 character long">
@@ -147,9 +165,8 @@
                                                 </b-form-input>
                                             </b-form-group>
                                         </b-col>
-                                       
                                     </b-row>
-<!-- ACCOUNT DETAILS-->
+<!-- ACCOUNT DETAILS-->             <p class="d4_header" style="padding-top:89px;">Account Details</p>
                                     <b-row>
                                         <b-col lg="5">
                                             <b-form-group id="input-group-3" label="ID" label-for="input-3" description="You can not change this field" disabled>
@@ -180,7 +197,7 @@
                                         
                                     </b-row>
                                     <!-- --------- -->
-                                    <p class="d4_header">Account Details</p>
+                                    
                                     <b-row class="row_ac_detail">
                                         <b-col lg="5">
                                             <b-form-group id="input-group-5" label="User Name" label-for="input-5" description="You can not change this field" disabled>
@@ -198,9 +215,9 @@
                                         <b-col lg="1">
                                         </b-col>
                                         <b-col lg="5">
-                                            <b-form-group id="input-group-6" label="attribute1" label-for="input-6">
+                                            <b-form-group id="input-group-6" label="Attribute1" label-for="input-6">
                                                 <b-form-input
-                                                    id="input-1"
+                                                    id="input-6"
                                                     v-model="form.attribute1"
                                                     required
                                                     placeholder="Atribute"
@@ -211,32 +228,38 @@
                                         <!-- Main Content Start-->
                                         
                                     </b-row>
-                                    <b-row>
+                                    <!-- button save and cancel -->
+                                    <b-row style="padding-bottom:40px;">
                                       <b-col lg="9">
                                       </b-col>
                                       <b-col lg="1">
                                         <div class="text-right">
-                                            <b-button style="color:#114483; background-color:white; border-color:#114483;">Cancel</b-button>
+                                          <a>
+                                            <b-button id="buttoncancel" class="buttonstyle">Cancel</b-button>
+                                          </a>
+                                            
                                         </div>
                                       </b-col>
                                       <b-col lg="1">
                                         <div class="text-right">
-                                            <b-button type="submit" style="background-color:#114483;">Save</b-button>
+                                          <a >
+                                            <b-button id="buttonsave" class="buttonstyle" type="submit">Save</b-button>
+                                          </a>
+                                            
                                         </div>
-                                      </b-col>
-                                      <b-col lg="1">
                                       </b-col>
                                     </b-row>
                                 </b-form>
                             </b-tab>
                               <b-tab title="SCHEDULE"><p>I'm the second tab</p>
                                 <template v-slot:title>
-                                  <img class="sidebar_icon" src="./assets/d4textschedule.svg" style="">
+                                  <img class="sidebar_icon" src="./assets/tbar3schedule.svg" style="">
                                 </template>
                               </b-tab>
                         </b-tabs>
                     </div>
-                    
+                    <!-- percobaan col dan row -->
+                      
                 </b-container>
                             <!-- Main Content Start-->
             </div>
@@ -250,29 +273,69 @@
 
 <script>
 export default {
-  name: 'app',
+name: 'app',
     data() {
-      return {
-        items: [
-        {
-          text: 'My Team',
-          href: '#'
-        },
-        {
-          text: 'Member Detail',
-          href: '#'
+        return {
+            items:[
+              {
+              text: 'My Team',
+              href: '#'
+            },
+            {
+              text: 'Member Detail',
+              href: '#'
+            }]
+            ,
+            form: {
+                password:'',
+                cpassword:'',
+                id:'',
+                name:'',
+                username:'',
+                attribute1:'',
+                show: true,   
+            },
+            counter:'close',
         }
-        ],
-      form: {
-        id: '',
-        password: '',
-        name: '',
-        cpassword: '',
-        username: '',
-        show: true,   
+    },
+    methods: {
+        greet: function () {
+            // `this` inside methods points to the Vue instance
+            // `event` is the native DOM event
+            if (this.counter == 'close') {
+                this.counter = 'open'
+                document.getElementById("sidecol").style.width = "219px";
+                
+                document.getElementsByClassName("nav-item").style.marginLeft = "100px";
+            }
+            else if (this.counter == 'open'){
+                this.counter = 'close'
+                document.getElementById("sidecol").style.width = "80px";
+
+                
+            }
+        },
+        onSubmit(evt) {
+          evt.preventDefault()
+          alert(JSON.stringify(this.form))
+        },
+        onReset(evt) {
+          evt.preventDefault()
+          // Reset our form values
+          this.form.email = ''
+          this.form.name = ''
+          this.form.food = null
+          this.form.checked = []
+          // Trick to reset/clear native browser form validation state
+          this.show = false
+          this.$nextTick(() => {
+            this.show = true
+          })
+        }
+        
+        
       }
-    }
-  }
+    
 }
 </script>
 <style>
@@ -296,19 +359,19 @@ body{
     font-family: Roboto;
     font-style: normal;
     background-color: #f5f5f5;
+    
 }
 .konten{
-    padding-top: 60px;
+    padding-top: 20px;
 }
 .tab-content{
     background-color: white;
-    margin-left: 10px;
+    padding-left:72px;
     padding-top:10px;
     text-align: left;
 }
-.tabs2{
-  padding-left:5%;
-  padding-right:5%;
+ul.nav.flex-column{
+  padding-left:10px;
 }
 hr{
     position: absolute;
@@ -336,8 +399,11 @@ hr{
 }
 .form-text{
   color:red;
+  margin-top: 4px !important; 
+  margin-bottom: 50px !important; 
 }
 .text-muted{
+  
   color:red;
   font-family: Roboto;
   font-style: normal;
@@ -355,13 +421,33 @@ hr{
   border-top: 5px solid #114483 !important;
 }
 .nav-tabs .nav-link{
+  padding-top: 20px;
+  padding-bottom: 20px;
+
   border: 0px solid transparent !important;
-  border-top-left-radius: 1px !important;
-  border-top-right-radius: 1px !important;
+  border-top-left-radius: .25rem !important;
+  border-top-right-radius: .25rem !important;
   text-align: center;
   width: 208px;
-  height: 90px;
+  height: 80px;
+  background-color: #f1f1f1 ;
+  
 }
+.nav-link.active, .nav-item.show .nav-link {
+  padding-top: 20px !important;
+}
+/* geser kiri dan menghilangkan border pada tabs + ganti juga di tab content */
+.nav-tabs{
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom: 0px !important;
+}
+/* header tabs and NAVS */
+.nav-tabs{
+  border-bottom: 0px solid transparent !important;
+  padding-left: 0px !important;
+}
+
 a {
   color: #555555 !important;
   text-decoration: none;
@@ -372,6 +458,48 @@ a {
   background-color: blue;
   padding-right:0px;
 }
+/* sidebar */
+#sidecol{
+    
+    width: 80px;
+    
+    transition: all 500ms linear;
+}
+li.nav-item{
+  margin-left: 0px;
+  margin-right:0px;
+}
+/* button */
+.buttonstyle{
+  float: right;
+}
+#buttoncancel{
+  width:114px;
+  height: 40px;
+  color:#114483; background-color:white;
+  border-color:#114483;
+  margin-right:12px;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+#buttonsave{
+  width:99px;
+  height: 40px;
+  background-color:#114483;
+  /* style button tidak masuk jika menggunakan class */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+/* button */
 
-
+ul.nav.flex-column.icon10{
+  padding:0px;
+}
 </style>

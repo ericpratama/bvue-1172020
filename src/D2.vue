@@ -4,7 +4,7 @@
         <!-- Sidebar -->
         <div class="row">
           <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div class="text-left">
+            <div class="text-left" style="padding-left:15px;">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
                   <a v-on:click="greet" class="nav-link" href="#">
@@ -65,12 +65,18 @@
                     <img v-if="counter=='close' " src = "./assets/sidebar_icon_9.svg" >
                   </a>
                 </li>
+                
               </ul>           
             </div>
-            <div>
-                <li class="nav-item navitem mx-auto">
-                  <a href="#"><img  src="./assets/sidebar_icon_10.svg" style="margin-right:5px;"></a>
+            <div class="text-center">
+              <ul class="nav flex-column">
+                <li class="nav-item navitem">
+                  <a class="nav-link" href="#">
+                    <img v-if="counter=='open' " src = "./assets/longicon10.svg" >
+                    <img v-if="counter=='close' " src = "./assets/sidebar_icon_10.svg" >
+                  </a>
                 </li>
+              </ul>
             </div>            
           </div>
 
@@ -136,13 +142,17 @@
                     </b-row>
                     <b-form @submit="onSubmit" @reset="onReset" class="konten">
                         <b-row>
+                          
                             <b-col lg="5" style="background-color:;">
+                                
                                 <b-form-group id="input-group-1" label="ID" label-for="input-1">
+                                  
                                     <b-form-input
                                         id="input-1"
                                         v-model="form.id"
                                         required
                                         placeholder="e.g SPV-1"
+                                        font-awesome-icon="user"
                                     >
                                     </b-form-input>
                                 </b-form-group>
@@ -150,12 +160,14 @@
                             <b-col lg="1" style="background-color:;">
                             </b-col>
                             <b-col lg="5" style="background-color:;">
+                              
                                 <b-form-group id="input-group-2" label="Create Password" label-for="input-2" description="At least 5 character long">
                                     <b-form-input
                                         id="input-1"
                                         v-model="form.password"
                                         type="password"
                                         required
+                                        
                                     >
                                     
                                     </b-form-input>
@@ -202,13 +214,15 @@
                                         v-model="form.username"
                                         required
                                         placeholder="e.g SPV-Rika"
-                                    >
+                                        
+                                    ><font-awesome-icon icon="user" />
                                     </b-form-input>
                                 </b-form-group>
                             </b-col>
-                            <b-col lg="5">
-                              
-                            </b-col>
+                            <b-col lg="1"></b-col>
+                            <b-input-group-prepend>
+                                  <span class="input-group-text"><font-awesome-icon icon="user" /></span>
+                                </b-input-group-prepend>
                         </b-row>
                         <!-- row 3 end-->
                         <!-- row button -->
@@ -231,7 +245,11 @@
                                 
                             </div>
                           </b-col>
+                          
                         </b-row>
+                        <h1>Getting Started with Vue.js and Font Awesome</h1>
+                        <p>Have a cup of coffee: <font-awesome-icon icon="coffee" /></p>
+                        
                         <!-- row button -->
                     </b-form>
                 </b-container>
@@ -283,7 +301,7 @@ export default {
             }
             else if (this.counter == 'open'){
                 this.counter = 'close'
-                document.getElementById("sidecol").style.width = "5%";
+                document.getElementById("sidecol").style.width = "90px";
 
                 
             }
@@ -357,13 +375,13 @@ hr{
     width: 98%;
     height: 1px;
 }
-.sidecol{
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 5%;
-    background: #114483;
+
+.sidecol {
     transition: all 500ms linear;
-}
+    width:90px;
+    height:970px;
+    background: #114483;
+  }
 .buttonstyle{
   float: right;
 }
@@ -392,25 +410,8 @@ hr{
   line-height: 24px;
 }
 
+ul.nav.flex-column.icon10{
+  padding:0px;
+}
 
-/* eye */
-.input-icons i { 
-            position: absolute; 
-        } 
-          
-        .input-icons { 
-            width: 100%; 
-            margin-bottom: 10px; 
-        } 
-          
-        .icon { 
-            padding: 10px; 
-            min-width: 40px; 
-        } 
-          
-        .input-field { 
-            width: 100%; 
-            padding: 10px; 
-            text-align: center; 
-        } 
 </style>

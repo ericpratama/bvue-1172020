@@ -4,7 +4,7 @@
         <!-- Sidebar -->
         <div class="row">
           <div id="sidecol" class="d-flex flex-column justify-content-between sidecol" style="background: #114483">
-            <div class="text-left">
+            <div class="text-left" style="padding-left:15px;">
               <ul class="nav flex-column">
                 <li class="nav-item navitem">
                   <a v-on:click="greet" class="nav-link" href="#">
@@ -232,6 +232,7 @@
                         <img class="sidebar_icon" src="./assets/d9schedule.svg">
                       </template>
                     </b-tab>
+                    
                   </b-tabs>
                 </div>
               </b-container>

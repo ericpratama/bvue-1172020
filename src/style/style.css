@@ -6,15 +6,8 @@
     font-weight: normal;
   }
   
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
   
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
+  
   
   
   .content_row{
@@ -28,9 +21,8 @@
   }
   
   .sidecol {
-    padding-left:0px; 
-    padding-right:0px;
-    width:5%;
+    
+    width:90px;
     height:970px;
     background: #114483;
   }
